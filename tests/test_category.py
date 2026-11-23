@@ -1,4 +1,3 @@
-import pytest
 from src.category import Category, Product
 
 
@@ -25,8 +24,8 @@ def test_total_products_count():
     cat1 = Category("Бытовая техника", "Для дома", [p1, p2])
     cat2 = Category("Мелкая бытовая", "Компактные приборы", [p3])
 
-    assert Category.total_categories == 2
-    assert Category.total_products == 3
+    assert Category.category_count == 2
+    assert Category.product_count == 3
 
 
 def test_total_categories_count_increments():
@@ -34,5 +33,5 @@ def test_total_categories_count_increments():
     Category("Категория 2", "Вторая категория", [])
     Category("Категория 3", "Третья категория", [])
 
-    assert Category.total_categories == 3
-    assert Category.total_products == 0
+    assert Category.category_count == 3
+    assert Category.product_count == 0
