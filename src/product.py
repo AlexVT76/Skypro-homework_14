@@ -9,12 +9,10 @@ class Product:
 
     @property
     def price(self) -> float:
-        """Геттер цены. Возвращает значение приватного атрибута."""
         return self._price
 
     @price.setter
     def price(self, new_price: float) -> None:
-        """Сеттер цены с проверкой: цена должна быть положительной."""
         if new_price <= 0:
             print("Цена не должна быть нулевая или отрицательная")
             return
